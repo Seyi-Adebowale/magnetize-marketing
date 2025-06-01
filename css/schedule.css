@@ -1,0 +1,86 @@
+@import 'global.css';
+
+  .container {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  .responsive-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    width: 95%;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  
+  .form-logo {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+  }
+  
+  input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+
+.form-group.radio-group {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .radio{
+    display: flex;
+  }
+  /* Align checkbox beside label */
+  .form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
+
+  }
+  
+  .form-group.checkbox-group input {
+    margin: 3px 10px 0 0; 
+    width: max-content;
+    align-self: flex-start;
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    input, textarea, button {
+      font-size: 14px;
+    }
+  }
+  

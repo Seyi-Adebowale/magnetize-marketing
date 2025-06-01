@@ -1,0 +1,136 @@
+@import 'global.css';
+
+.about-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mission-banner.jpg");
+}
+.about-wrapper {
+  color: #1e1e1e;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.85;
+}
+
+.about-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.value-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.value-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.team-section {
+  background-color: #fff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-card {
+  background: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.03);
+}
+
+.team-photo {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.team-name {
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 5px;
+}
+
+.team-role {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contact-highlight {
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-details {
+  font-size: 1rem;
+  line-height: 1.8;
+}
