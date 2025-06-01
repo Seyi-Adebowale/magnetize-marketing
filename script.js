@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
-  
-  let pathSegments = location.pathname.split("/").filter(seg => seg.length > 0);
+  let pathSegments = location.pathname.split("/").filter((seg) => seg.length > 0);
   let basePath = "";
   if (pathSegments.length > 1) {
     basePath = "../".repeat(pathSegments.length - 1);
@@ -91,10 +89,19 @@ document.addEventListener("DOMContentLoaded", function () {
       hideMenuButton.addEventListener("click", window.hideMenu);
     }
 
-    // Hide menu when any menu link clicked (for mobile)
+    // Improved: Hide menu and navigate after short delay
     const menuLinks = document.querySelectorAll("#navlinks a");
     menuLinks.forEach((link) => {
-      link.addEventListener("click", window.hideMenu);
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetHref = link.getAttribute("href");
+
+        window.hideMenu();
+
+        setTimeout(() => {
+          window.location.href = targetHref;
+        }, 300); // Adjust delay to match your menu animation
+      });
     });
   }
 
@@ -102,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
   const options = {
     root: null,
-    threshold: 0.3, // Trigger when 30% visible
+    threshold: 0.3,
   };
 
   const animateCounter = (counter) => {
@@ -134,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   counters.forEach((counter) => observer.observe(counter));
 
-  // Swiper init (assuming you use Swiper)
+  // Swiper init (if used)
   const swiper = new Swiper(".mySwiper", {
     loop: true,
     grabCursor: true,
