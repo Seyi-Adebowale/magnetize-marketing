@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         container.innerHTML = data;
+
         highlightNavLinks();
         initializeMenu();
+        setupDropdownToggle();
 
         const header = document.querySelector("header");
         if (header) {
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // Navigation highlight based on pathname
+  // Highlight current page link
   function highlightNavLinks() {
     const navLinks = document.querySelectorAll("#navlinks ul li a");
     navLinks.forEach((link) => {
@@ -68,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Menu open/close
+  // Show/hide mobile nav menu
   function initializeMenu() {
     const navLinks = document.querySelector("#navlinks");
     if (!navLinks) return;
@@ -89,10 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
       hideMenuButton.addEventListener("click", window.hideMenu);
     }
 
-    // Improved: Hide menu and navigate after short delay
+    // Link click closes menu (unless it's dropdown-toggle)
     const menuLinks = document.querySelectorAll("#navlinks a");
     menuLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
+        const isDropdownToggle = link.classList.contains("dropdown-toggle");
+        if (isDropdownToggle) return;
+
         e.preventDefault();
         const targetHref = link.getAttribute("href");
 
@@ -100,12 +105,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
           window.location.href = targetHref;
-        }, 300); // Adjust delay to match your menu animation
+        }, 300);
       });
     });
   }
 
-  // Counter animation on scroll using IntersectionObserver
+  // Setup mobile dropdown toggle
+  function setupDropdownToggle() {
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    dropdownToggles.forEach((toggle) => {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const parentLi = toggle.closest(".dropdown");
+
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+          if (dropdown !== parentLi) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        // Toggle current
+        parentLi.classList.toggle("open");
+      });
+    });
+
+    // Optional: close dropdown on clicking any item
+    document.querySelectorAll(".dropdown-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+          dropdown.classList.remove("open");
+        });
+        window.hideMenu?.(); // close mobile nav
+      });
+    });
+  }
+
+  // Counter animation
   const counters = document.querySelectorAll(".counter");
   const options = {
     root: null,
@@ -141,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   counters.forEach((counter) => observer.observe(counter));
 
-  // Swiper init (if used)
+  // Swiper setup
   const swiper = new Swiper(".mySwiper", {
     loop: true,
     grabCursor: true,

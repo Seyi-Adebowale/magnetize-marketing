@@ -1,29 +1,64 @@
 <header id="header">
-    <div class="navbar">
-      <div class="logo">
-        <img src="/img/logo.jpeg" alt="Logo" />
-      </div>
-      <nav id="navlinks" class="nav-menu">
-        <i class="menu-icon fas fa-times d-md-none" onclick="hideMenu()"></i>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Resources</a></li>
-        </ul>
-
-        <div class="book-button">
-          <a
-            href="/contact.html"
-          >
-            <button class="book-appointment">Contact Us</button>
-          </a>
-        </div>
-      </nav>
-      <i class="menu-icon fas fa-bars d-md-none" onclick="showMenu()"></i>
+  <div class="navbar">
+    <div class="logo">
+      <img src="/img/logo.jpeg" alt="Logo" />
     </div>
-  </header>
+    <nav id="navlinks" class="nav-menu">
+      <i class="menu-icon fas fa-times d-md-none" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">
+            Services <i class="fas fa-chevron-down"></i>
+          </a>
 
-  
+          <ul class="dropdown-menu">
+            <li><a href="/services/seo.html">SEO</a></li>
+            <li><a href="/services/sem.html">SEM</a></li>
+            <li><a href="/services/gso.html">GSO</a></li>
+            <li>
+              <a href="/services/social-media-marketing.html">Social Media</a>
+            </li>
+            <li>
+              <a href="/services/website-development.html"
+                >Website Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/brand-development.html">Brand Development</a>
+            </li>
+            <li><a href="/services/digital-pr.html">Digital PR</a></li>
+            <li>
+              <a href="/services/retail-distribution.html"
+                >Retail Distribution</a
+              >
+            </li>
+            <li>
+              <a href="/services/content-marketing.html">Content Marketing</a>
+            </li>
+            <li>
+              <a href="/services/email-marketing.html">Email Marketing</a>
+            </li>
+            <li>
+              <a href="/services/analytics-reporting.html"
+                >Analytics & Reporting</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+
+      <div class="book-button">
+        <a href="/contact.html">
+          <button class="book-appointment">Contact Us</button>
+        </a>
+      </div>
+    </nav>
+    <i class="menu-icon fas fa-bars d-md-none" onclick="showMenu()"></i>
+  </div>
+</header>

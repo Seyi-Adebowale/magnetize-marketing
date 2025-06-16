@@ -22,35 +22,48 @@
 
     <main>
       <section class="service-detail">
-        <a href="/services.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Back to Services</a>
         <h1>Search Engine Optimization (SEO)</h1>
         <p class="service-intro">
-          Boost your website’s visibility and rankings with expert SEO strategies that include audits, on-page optimization, technical improvements, and ongoing management.
+          Boost your website’s visibility and rankings with expert SEO
+          strategies that include audits, on-page optimization, technical
+          improvements, and ongoing management.
         </p>
 
         <div class="subsections-grid">
           <article class="subsection-card">
             <div class="icon-circle"><i class="fas fa-search"></i></div>
             <h3>SEO Audit</h3>
-            <p>Comprehensive analysis of your website’s SEO health and opportunities.</p>
+            <p>
+              Comprehensive analysis of your website’s SEO health and
+              opportunities.
+            </p>
           </article>
 
           <article class="subsection-card">
             <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
             <h3>On-Page SEO</h3>
-            <p>Optimize site content, meta tags, and internal linking for better rankings.</p>
+            <p>
+              Optimize site content, meta tags, and internal linking for better
+              rankings.
+            </p>
           </article>
 
           <article class="subsection-card">
             <div class="icon-circle"><i class="fas fa-link"></i></div>
             <h3>Off-Page SEO</h3>
-            <p>Build quality backlinks and improve your website’s authority online.</p>
+            <p>
+              Build quality backlinks and improve your website’s authority
+              online.
+            </p>
           </article>
 
           <article class="subsection-card">
             <div class="icon-circle"><i class="fas fa-cogs"></i></div>
             <h3>Technical SEO</h3>
-            <p>Improve speed, mobile-friendliness, and crawlability for search engines.</p>
+            <p>
+              Improve speed, mobile-friendliness, and crawlability for search
+              engines.
+            </p>
           </article>
 
           <article class="subsection-card">
@@ -62,14 +75,87 @@
           <article class="subsection-card">
             <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
             <h3>Monthly SEO Management</h3>
-            <p>Ongoing optimization and reporting to maintain and improve rankings.</p>
+            <p>
+              Ongoing optimization and reporting to maintain and improve
+              rankings.
+            </p>
           </article>
         </div>
       </section>
+
+      <div class="consultation-info">
+        <div class="consultation-text">
+          <h2>Looking to Grow Your Business Online?</h2>
+          <p>
+            Whether you need better visibility, more leads, or a complete
+            digital strategy, our team is here to help. Fill out the form and
+            one of our marketing specialists will get in touch with you shortly.
+          </p>
+        </div>
+
+        <form class="responsive-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="services">Which service are you interested in?</label>
+            <select id="services" name="services" required>
+              <option value="" disabled selected>Please Select</option>
+              <option value="seo">Search Engine Optimization (SEO)</option>
+              <option value="sem">Search Engine Marketing (SEM)</option>
+              <option value="social-media">Social Media Marketing</option>
+              <option value="web-development">
+                Website Design & Development
+              </option>
+              <option value="branding">Branding & Strategy</option>
+              <option value="email-marketing">Email Marketing</option>
+              <option value="content">Content Creation</option>
+              <option value="analytics">Analytics & Reporting</option>
+              <option value="unsure">I'm not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message"
+              >Tell us a bit about your project or goals</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="E.g. I want to generate more leads through social media..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn submit-btn2">
+            Get a Free Consultation
+          </button>
+        </form>
+      </div>
     </main>
 
     <div class="footer-container"></div>
 
-   <script src="../script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
