@@ -49,26 +49,60 @@ document.addEventListener("DOMContentLoaded", function () {
   // Highlight current page link
   function highlightNavLinks() {
     const navLinks = document.querySelectorAll("#navlinks ul li a");
+    const currentPath = location.pathname;
+
     navLinks.forEach((link) => {
       link.classList.remove("selected");
+
+      const linkPath = new URL(link.href).pathname;
+
+      // Home
       if (
-        link.innerHTML.includes("Home") &&
-        (location.pathname === "/" || location.pathname.includes("index"))
-      ) {
-        link.classList.add("selected");
-      } else if (
-        link.innerHTML.includes("Career") &&
-        location.pathname.includes("career")
-      ) {
-        link.classList.add("selected");
-      } else if (
-        link.innerHTML.includes("Services") &&
-        location.pathname.includes("services")
+        (currentPath === "/" && linkPath === "/index.html") ||
+        (currentPath === "/index.html" && linkPath === "/index.html") ||
+        (currentPath === "/" && linkPath === "/")
       ) {
         link.classList.add("selected");
       }
+
+      // About
+      if (currentPath === "/about.html" && linkPath === "/about.html") {
+        link.classList.add("selected");
+      }
+
+      // Blog (for blog homepage and article pages)
+      if (
+        (currentPath === "/blog.html" && linkPath === "/blog.html") ||
+        (currentPath.startsWith("/articles/") && linkPath === "/blog.html")
+      ) {
+        link.classList.add("selected");
+      }
+
+      // Resources
+      if (currentPath === "/resources.html" && linkPath === "/resources.html") {
+        link.classList.add("selected");
+      }
+
+      if (currentPath === "/portfolio.html" && linkPath === "/portfolio.html") {
+        link.classList.add("selected");
+      }
+
+      // Contact Us
+      if (currentPath === "/contact.html" && linkPath === "/contact.html") {
+        link.classList.add("selected");
+      }
     });
+
+    // Handle Services dropdown separately
+    if (currentPath.startsWith("/services/")) {
+      const servicesDropdown = document.querySelector(".dropdown > .dropdown-toggle");
+      if (servicesDropdown) {
+        servicesDropdown.classList.add("selected");
+      }
+    }
   }
+
+
 
   // Show/hide mobile nav menu
   function initializeMenu() {

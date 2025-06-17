@@ -122,7 +122,7 @@ nav ul li a {
 .book-appointment {
   background-color: var(--secondary-color);
   font-family: inherit;
-  padding: 15px 20px;
+  padding: 10px;
   color: var(--main-color);
   border: none;
   border-radius: 5px;
@@ -319,9 +319,8 @@ nav ul li a {
     text-align: center;
     gap: 0px;
   }
-
   .footer-section {
-    margin-right: 0;
+    margin-right: 0px;
     margin-bottom: 20px;
   }
   .footer-section h4 {
@@ -331,6 +330,15 @@ nav ul li a {
     text-align: center;
   }
 }
+@media screen and (max-width: 400px) {
+  .footer{
+    padding: 20px 10px;
+  }
+  .contact-section ul li{
+    word-break: break-word;
+  }
+}
+
 .sub-header {
   height: 250px;
   background-position: center;

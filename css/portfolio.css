@@ -1,0 +1,10 @@
+@import 'global.css';
+
+.sub-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/portfolio.jpeg");
+}
+h2{
+    margin: 30px auto;
+    text-align: center;
+}
