@@ -35,6 +35,7 @@
 
 .about-text {
   text-align: center;
+  padding: 0 40px;
   font-size: 1.1rem;
   color: #333;
   max-width: 800px;
@@ -80,6 +81,7 @@
 
 .team-section {
   background-color: #fff;
+  padding: 0px 60px;
 }
 
 .team-grid {
@@ -213,5 +215,240 @@
   }
   .steps-container .step {
       margin-bottom: 20px;
+  }
+}
+/* Message Section Styles */
+.magnetize-message-section {
+  padding: 40px 60px;
+  background: #f9f9f9;
+
+}
+
+.magnetize-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* allows responsiveness */
+}
+
+.magnetize-message-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.magnetize-message-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.magnetize-message-text {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .magnetize-message-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .magnetize-message-text {
+    margin-top: 20px;
+  }
+}
+/* Why Us Section Styles */
+.magnetize-whyus-section {
+  padding: 60px;
+  background: #f9f9fb;
+}
+
+.magnetize-whyus-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.magnetize-whyus-heading {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+}
+
+.magnetize-whyus-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-color);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.magnetize-whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.magnetize-whyus-card {
+  background: #fff;
+  padding: 35px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.magnetize-whyus-card i {
+  font-size: 2.2rem;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.magnetize-whyus-card h3 {
+  font-size: 1.3rem;
+  color: var(--main-color);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.magnetize-whyus-card p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.magnetize-whyus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .magnetize-whyus-heading {
+    font-size: 1.8rem;
+  }
+
+  .magnetize-whyus-card {
+    padding: 25px 15px;
+  }
+
+  .magnetize-whyus-card h3 {
+    font-size: 1.2rem;
+  }
+}
+/* Lead Form Section */
+.magnetize-lead-section {
+  background: linear-gradient(135deg, #f9fafc, #f1f3f6);
+  padding: 80px 60px;
+}
+
+.magnetize-lead-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.magnetize-lead-text {
+  text-align: center;
+}
+
+.magnetize-lead-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.magnetize-lead-text p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Form Card */
+.magnetize-lead-form-wrapper {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.magnetize-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.magnetize-lead-field input,
+.magnetize-lead-field select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.magnetize-lead-field input:focus,
+.magnetize-lead-field select:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
+}
+
+.magnetize-lead-btn {
+  background: var(--secondary-color);
+  color: var(--main-color);
+  border: none;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-family: inherit;
+}
+
+.magnetize-lead-btn:hover {
+  background: var(--main-color);
+  transform: translateY(-2px);
+  color: #fff
+}
+
+.magnetize-lead-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .magnetize-lead-container {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .magnetize-lead-text {
+    text-align: left;
   }
 }

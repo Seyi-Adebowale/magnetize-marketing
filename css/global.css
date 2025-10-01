@@ -237,15 +237,19 @@ nav ul li a {
   padding: 0px;
 }
 }
-
-.footer {
+.footer{
+  display: flex;
+  flex-direction:  column;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  background-color: var(--main-color);
+}
+.footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 20px 80px;
   gap: 20px;
-  border-top: 1px solid #ddd;
-  margin-top: 30px;
-  background-color: var(--main-color);
+ 
 }
 
 .footer-section {
@@ -315,7 +319,7 @@ nav ul li a {
   }
 }
 @media screen and (max-width: 768px) {
-  .footer {
+  .footer-top {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 0px;
@@ -332,7 +336,7 @@ nav ul li a {
   }
 }
 @media screen and (max-width: 400px) {
-  .footer{
+  .footer-top{
     padding: 20px 10px;
   }
   .contact-section ul li{
@@ -487,4 +491,5 @@ main {
   border-top: 1px solid rgba(255,255,255,0.2);
   font-size: 0.9rem;
   color: #ccc;
+  width: 100%
 }
